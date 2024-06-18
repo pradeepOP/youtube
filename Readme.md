@@ -1,6 +1,6 @@
 # Youtube Full stack Project
 
-### Simple full stack project trying ti clone youtube
+### Simple full stack project trying to clone youtube
 
 # Features
 
