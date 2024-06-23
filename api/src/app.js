@@ -8,13 +8,12 @@ const app = express();
 // Routes import
 import userRoutes from "./routes/user.route.js";
 
+const corsOptions = {
+  origin: "http://localhost:5173", // Your frontend origin
+  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+};
+app.use(cors(corsOptions));
 app.use(morgan("dev"));
-app.use(
-  cors({
-    origin: process.env.CORS_ORIGIN,
-    credentials: true,
-  })
-);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
